@@ -103,7 +103,7 @@ export default function Index() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#071829]/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <button onClick={() => scrollTo("#hero")} className="flex items-center">
-            <img src={LOGO_URL} alt="Аякс на берегу" className="h-14 w-auto object-contain" />
+            <img src={LOGO_URL} alt="Аякс на берегу" className="h-28 w-auto object-contain" />
           </button>
 
           <div className="hidden lg:flex items-center gap-7">
@@ -181,7 +181,7 @@ export default function Index() {
 
         <div className="absolute bottom-12 left-0 right-0 z-10 hidden md:flex justify-center">
           <div className="flex divide-x divide-white/20 bg-[#071829]/60 backdrop-blur-md border border-white/10 px-2">
-            {[["500+", "Сделок"], ["15 лет", "На рынке"], ["98%", "Довольных клиентов"]].map(([val, lbl]) => (
+            {[["27 лет", "На рынке"], ["98%", "Довольных клиентов"]].map(([val, lbl]) => (
               <div key={lbl} className="px-8 py-4 text-center">
                 <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl text-[#C9A84C] font-semibold">{val}</div>
                 <div className="text-white/60 text-xs tracking-widest uppercase mt-0.5">{lbl}</div>
@@ -199,17 +199,30 @@ export default function Index() {
               <div>
                 <p className="text-[#C9A84C] tracking-[0.25em] text-xs uppercase mb-3">О компании</p>
                 <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl md:text-5xl text-[#0D2644] font-light mb-2 leading-tight">
-                  15 лет помогаем найти<br /><em className="italic text-[#2B7FA3]">дом у моря</em>
+                  27 лет помогаем найти<br /><em className="italic text-[#2B7FA3]">дом у моря</em>
                 </h2>
                 <GoldDivider />
                 <p className="text-[#0D2644]/70 leading-relaxed mb-5">
                   Агентство «Аякс на берегу» — одно из ведущих агентств недвижимости Черноморского побережья. Мы специализируемся на объектах в Сочи, Адлере, Хосте и прилегающих районах.
                 </p>
-                <p className="text-[#0D2644]/70 leading-relaxed mb-8">
-                  Наша команда — это опытные специалисты, которые знают каждый квартал побережья. Мы помогаем клиентам из всех регионов России найти идеальную недвижимость: от уютных студий до эксклюзивных вилл с видом на море.
-                </p>
+                <p className="text-[#0D2644]/80 font-medium mb-3">Сегодня «Аякс» — это:</p>
+                <ul className="space-y-2 mb-8">
+                  {[
+                    "25 лет успешной работы",
+                    "более 30 000 объектов в базе",
+                    "45 офисов-партнёров в 20 городах России",
+                    "120 партнёров-застройщиков",
+                    "60 зарубежных партнёров",
+                    "800 специалистов по недвижимости",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-[#0D2644]/70 text-sm">
+                      <span className="text-[#C9A84C] mt-0.5 shrink-0">◆</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
                 <div className="grid grid-cols-3 gap-4">
-                  {[["500+", "Сделок"], ["15", "Лет опыта"], ["200+", "Объектов"]].map(([n, l]) => (
+                  {[["27", "Лет опыта"], ["30 000+", "Объектов"], ["800", "Специалистов"]].map(([n, l]) => (
                     <div key={l} className="border border-[#C9A84C]/30 p-4 text-center bg-white">
                       <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-3xl text-[#C9A84C] font-semibold">{n}</div>
                       <div className="text-[#0D2644]/60 text-xs tracking-wider uppercase mt-1">{l}</div>

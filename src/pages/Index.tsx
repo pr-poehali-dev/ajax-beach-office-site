@@ -510,15 +510,21 @@ export default function Index() {
                     </div>
                   ))}
                   <div className="pt-4 flex gap-3">
-                    {[
-                      { ic: "MessageCircle", label: "WhatsApp" },
-                      { ic: "Send", label: "Telegram" },
-                      { ic: "Phone", label: "Позвонить" },
-                    ].map(({ ic, label }) => (
-                      <button key={ic} title={label} className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all">
-                        <Icon name={ic} size={16} className="text-[#0D2644]" />
-                      </button>
-                    ))}
+                    <button title="WhatsApp" className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all">
+                      <Icon name="MessageCircle" size={16} className="text-[#0D2644]" />
+                    </button>
+                    <a
+                      href="https://max.ru/u/f9LHodD0cOJOYPMwe3_teri4WprcK9P3mUZ1Xz17H45WFxUlG5bcwVA8h8g"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="МаксПочта"
+                      className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all"
+                    >
+                      <span className="text-[#0D2644] font-bold text-xs leading-none">MAX</span>
+                    </a>
+                    <button title="Позвонить" className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all">
+                      <Icon name="Phone" size={16} className="text-[#0D2644]" />
+                    </button>
                   </div>
                 </div>
               </div>

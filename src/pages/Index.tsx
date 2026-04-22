@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const LOGO_URL = "https://cdn.poehali.dev/files/19e8d2a5-beeb-44fd-af7e-a4cdff2f3173.jfif";
+const LOGO_URL = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/ba24c586-555c-4dee-89b3-b5627406e1ca.png";
 const HERO_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/files/e4e75224-fe65-4f5f-93f0-cef106c3cca4.jpg";
 const COAST_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/files/a68474c1-2d4e-4050-bfd4-cb5c3f09f79b.jpg";
 
@@ -102,11 +102,8 @@ export default function Index() {
       {/* NAV */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#071829]/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <button onClick={() => scrollTo("#hero")} className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="Аякс на берегу" className="h-10 w-10 object-contain rounded-full bg-white" />
-            <span style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-lg font-semibold text-white hidden sm:block leading-tight">
-              Аякс<br /><span className="text-[#C9A84C] text-xs font-normal tracking-widest">НА БЕРЕГУ</span>
-            </span>
+          <button onClick={() => scrollTo("#hero")} className="flex items-center">
+            <img src={LOGO_URL} alt="Аякс на берегу" className="h-14 w-auto object-contain" />
           </button>
 
           <div className="hidden lg:flex items-center gap-7">
@@ -516,12 +513,8 @@ export default function Index() {
       <footer className="bg-[#071829] py-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3">
-              <img src={LOGO_URL} alt="Аякс на берегу" className="h-10 w-10 object-contain rounded-full bg-white" />
-              <div>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-white font-semibold">Аякс на берегу</div>
-                <div className="text-[#C9A84C]/60 text-xs tracking-widest">НЕДВИЖИМОСТЬ У МОРЯ</div>
-              </div>
+            <div className="flex items-center">
+              <img src={LOGO_URL} alt="Аякс на берегу" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex flex-wrap justify-center gap-5">
               {navLinks.map((l) => (

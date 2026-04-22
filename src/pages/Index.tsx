@@ -199,12 +199,10 @@ export default function Index() {
               <div>
                 <p className="text-[#C9A84C] tracking-[0.25em] text-xs uppercase mb-3">О компании</p>
                 <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl md:text-5xl text-[#0D2644] font-light mb-2 leading-tight">
-                  27 лет помогаем найти<br /><em className="italic text-[#2B7FA3]">дом у моря</em>
+                  27 лет помогаем найти<br /><em className="italic text-[#2B7FA3]">недвижимость у моря</em>
                 </h2>
                 <GoldDivider />
-                <p className="text-[#0D2644]/70 leading-relaxed mb-5">
-                  Агентство «Аякс на берегу» — одно из ведущих агентств недвижимости Черноморского побережья. Мы специализируемся на объектах в Сочи, Адлере, Хосте и прилегающих районах.
-                </p>
+                <p className="text-[#0D2644]/70 leading-relaxed mb-5">Агентство «Аякс на берегу» — одно из ведущих агентств недвижимости Черноморского побережья. Мы специализируемся на объектах в Анапе и Новороссийске, а также прилегающих районах.</p>
                 <p className="text-[#0D2644]/80 font-medium mb-3">Сегодня «Аякс» — это:</p>
                 <ul className="space-y-2 mb-8">
                   {[

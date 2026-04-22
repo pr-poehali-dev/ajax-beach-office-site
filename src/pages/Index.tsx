@@ -256,10 +256,9 @@ export default function Index() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 {[
-                  { icon: "MapPin", label: "Адрес", val: "г. Сочи, ул. Навагинская, 16, офис 302" },
-                  { icon: "Clock", label: "Режим работы", val: "Пн–Пт: 9:00–19:00 / Сб: 10:00–17:00" },
-                  { icon: "Phone", label: "Телефон", val: "+7 (862) 123-45-67" },
-                  { icon: "Mail", label: "Email", val: "info@ayaks-na-beregu.ru" },
+                  { icon: "MapPin", label: "Адрес", val: "Краснодарский край, г. Анапа, пр. Революции, 3" },
+                  { icon: "Clock", label: "Режим работы", val: "Пн–Пт: 09:00–18:00 / Сб: 10:00–16:00" },
+                  { icon: "Phone", label: "Телефон", val: "8 906 187 60 57" },
                 ].map(({ icon, label, val }) => (
                   <div key={label} className="flex gap-4 items-start border-b border-white/10 pb-5">
                     <div className="w-10 h-10 bg-[#C9A84C]/20 flex items-center justify-center shrink-0 mt-0.5">
@@ -487,10 +486,9 @@ export default function Index() {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl text-[#0D2644] mb-6">Наши контакты</h3>
                 <div className="space-y-6">
                   {[
-                    { icon: "Phone", title: "Телефон", lines: ["+7 (862) 123-45-67", "+7 (988) 765-43-21"] },
-                    { icon: "Mail", title: "Email", lines: ["info@ayaks-na-beregu.ru"] },
-                    { icon: "MapPin", title: "Адрес", lines: ["г. Сочи, ул. Навагинская, 16", "офис 302, 3-й этаж"] },
-                    { icon: "Clock", title: "Режим работы", lines: ["Пн–Пт: 9:00–19:00", "Сб: 10:00–17:00"] },
+                    { icon: "Phone", title: "Телефон", lines: ["8 906 187 60 57"] },
+                    { icon: "MapPin", title: "Адрес", lines: ["Краснодарский край, г. Анапа,", "пр. Революции, 3"] },
+                    { icon: "Clock", title: "Режим работы", lines: ["Пн–Пт: 09:00–18:00", "Сб: 10:00–16:00"] },
                   ].map(({ icon, title, lines }) => (
                     <div key={title} className="flex gap-4">
                       <div className="w-11 h-11 bg-[#0D2644] flex items-center justify-center shrink-0">

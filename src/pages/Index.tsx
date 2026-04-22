@@ -454,7 +454,7 @@ export default function Index() {
         </div>
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl md:text-5xl text-white font-light mb-4">
-            Найдём ваш дом <em className="italic text-[#C9A84C]">у моря</em>
+            Найдём ваше жильё <em className="italic text-[#C9A84C]">у моря</em>
           </h2>
           <p className="text-white/70 mb-8 text-lg">Бесплатная консультация без обязательств. Расскажите о своих пожеланиях — мы предложим лучшие варианты.</p>
           <button onClick={() => document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })}

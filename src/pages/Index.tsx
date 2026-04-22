@@ -22,7 +22,6 @@ const services = [
   { icon: "FileText", title: "Юридическое сопровождение", desc: "Полное юридическое сопровождение сделки. Проверка документов и чистоты объекта." },
   { icon: "BarChart2", title: "Инвестиционный консалтинг", desc: "Поможем выбрать ликвидные объекты для инвестиций с максимальной доходностью." },
   { icon: "Landmark", title: "Ипотека и рассрочка", desc: "Поможем оформить ипотеку в ведущих банках на выгодных условиях." },
-  { icon: "PenRuler", title: "Дизайн и ремонт", desc: "Сделаем индивидуальный дизайн-проект под ваш запрос и организуем подряд, по желанию." },
 ];
 
 const objects = [
@@ -33,16 +32,16 @@ const objects = [
 ];
 
 const reviews = [
-  { name: "Марина Соколова", city: "Москва", text: "Купили квартиру у моря с первого показа. Команда Аякса очень профессиональна — все документы проверили сами, сделка прошла чисто и быстро.", rating: 5 },
-  { name: "Алексей Дроздов", city: "Санкт-Петербург", text: "Продали квартиру в Сочи за 3 недели по хорошей цене. Очень доволен работой агентства. Рекомендую всем, кто хочет без лишних хлопот.", rating: 5 },
-  { name: "Наталья Воронова", city: "Екатеринбург", text: "Помогли подобрать инвестиционный объект. Доходность уже в первый сезон превысила ожидания. Сотрудничаем дальше!", rating: 5 },
+  { name: "Сергей Малинин", city: "Краснодар", agent: "Вадим", deal: "Покупка", text: "Давно хотели купить квартиру в Анапе у моря, но не знали, с чего начать. Вадим из «Аякса» провёл нас по всем объектам, объяснил все нюансы и помог выбрать отличный вариант. Сделка прошла чисто и в срок. Огромное спасибо!", rating: 5 },
+  { name: "Ольга Кириченко", city: "Ростов-на-Дону", agent: "Лариса", deal: "Продажа", text: "Продавала квартиру в Анапе — думала, это займёт полгода. Лариса нашла покупателя за три недели! Всё оформила сама, я приехала только на подписание. Профессионально и без нервов.", rating: 5 },
+  { name: "Дмитрий Фролов", city: "Москва", agent: "Григорий", deal: "Покупка", text: "Покупали дом в Анапе дистанционно — живём в Москве. Григорий показывал объекты по видеосвязи, всё проверил юридически. Через месяц стали собственниками. Рекомендую агентство всем, кто покупает из другого города.", rating: 5 },
 ];
 
 const faqs = [
   { q: "Сколько времени занимает покупка недвижимости?", a: "Обычно от 2 до 6 недель: 1-2 недели на подбор объекта, 1-3 недели на юридическую проверку и оформление сделки. Мы сопровождаем вас на каждом этапе." },
   { q: "Как проверить юридическую чистоту объекта?", a: "Наши юристы проверяют выписку из ЕГРН, историю переходов права собственности, отсутствие обременений и задолженностей, законность перепланировок." },
   { q: "Можно ли купить недвижимость дистанционно?", a: "Да, мы работаем с покупателями из любой точки России. Оформляем сделки через электронную регистрацию или по нотариальной доверенности." },
-  { q: "Какова комиссия агентства?", a: "Комиссия составляет от 2% до 3% от суммы сделки. Точная стоимость зависит от типа объекта и набора услуг. Первая консультация — бесплатно." },
+  { q: "Какова комиссия агентства?", a: "Стандартная комиссия агентства составляет 3% от суммы сделки. Первая консультация — бесплатно." },
   { q: "Как правильно оценить стоимость моей недвижимости?", a: "Мы проводим бесплатную рыночную оценку на основе анализа аналогичных объектов, местоположения, состояния и ликвидности. Звоните — приедем и оценим." },
   { q: "Помогаете ли вы с ипотекой?", a: "Да, мы сотрудничаем с ведущими банками и помогаем получить одобрение на выгодных условиях. Также возможна рассрочка от застройщиков-партнёров." },
 ];
@@ -383,23 +382,29 @@ export default function Index() {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {reviews.map((r, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 p-8 hover:border-[#C9A84C]/40 transition-all">
-                  <div className="flex gap-0.5 mb-5">
-                    {Array.from({ length: r.rating }).map((_, j) => (
-                      <span key={j} className="text-[#C9A84C] text-lg">★</span>
-                    ))}
+                <div key={i} className="bg-white/5 border border-white/10 p-8 hover:border-[#C9A84C]/40 transition-all flex flex-col">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: r.rating }).map((_, j) => (
+                        <span key={j} className="text-[#C9A84C] text-lg">★</span>
+                      ))}
+                    </div>
+                    <span className="text-xs text-[#C9A84C]/70 border border-[#C9A84C]/30 px-2 py-0.5">{r.deal}</span>
                   </div>
-                  <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-white/80 leading-relaxed mb-6 text-lg italic">
+                  <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-white/80 leading-relaxed mb-6 text-lg italic flex-1">
                     «{r.text}»
                   </p>
-                  <div className="border-t border-white/10 pt-5 flex items-center gap-3">
-                    <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="w-9 h-9 bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C] font-semibold text-lg">
-                      {r.name[0]}
+                  <div className="border-t border-white/10 pt-5">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="w-9 h-9 bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C] font-semibold text-lg shrink-0">
+                        {r.name[0]}
+                      </div>
+                      <div>
+                        <div className="text-white font-semibold text-sm">{r.name}</div>
+                        <div className="text-white/40 text-xs">{r.city}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-white font-semibold text-sm">{r.name}</div>
-                      <div className="text-white/40 text-xs">{r.city}</div>
-                    </div>
+                    <div className="text-white/30 text-xs">Менеджер: <span className="text-[#C9A84C]/70">{r.agent}</span></div>
                   </div>
                 </div>
               ))}

@@ -510,14 +510,20 @@ export default function Index() {
                     </div>
                   ))}
                   <div className="pt-4 flex gap-3">
-                    <button title="WhatsApp" className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all">
-                      <Icon name="MessageCircle" size={16} className="text-[#0D2644]" />
-                    </button>
+                    <a
+                      href="https://www.instagram.com/ayax_bereg?igsh=MWo5MWdrNDNtYnJhOQ%3D%3D&utm_source=qr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Instagram"
+                      className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all"
+                    >
+                      <Icon name="Instagram" size={16} className="text-[#0D2644]" />
+                    </a>
                     <a
                       href="https://max.ru/u/f9LHodD0cOJOYPMwe3_teri4WprcK9P3mUZ1Xz17H45WFxUlG5bcwVA8h8g"
                       target="_blank"
                       rel="noopener noreferrer"
-                      title="МаксПочта"
+                      title="MAX"
                       className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all"
                     >
                       <span className="text-[#0D2644] font-bold text-xs leading-none">MAX</span>

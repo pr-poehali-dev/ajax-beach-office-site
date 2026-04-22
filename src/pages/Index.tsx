@@ -528,9 +528,13 @@ export default function Index() {
                     >
                       <span className="text-[#0D2644] font-bold text-xs leading-none">MAX</span>
                     </a>
-                    <button title="Позвонить" className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all">
+                    <a
+                      href="tel:+79061876057"
+                      title="Позвонить"
+                      className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all"
+                    >
                       <Icon name="Phone" size={16} className="text-[#0D2644]" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

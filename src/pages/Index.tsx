@@ -102,7 +102,7 @@ export default function Index() {
       {/* NAV */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#071829]/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <button onClick={() => scrollTo("#hero")} className="flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full p-3">
+          <button onClick={() => scrollTo("#hero")} className="flex items-center justify-center bg-white/20 backdrop-blur-md rounded-3xl p-3" style={{boxShadow: "0 0 24px 12px rgba(255,255,255,0.12)"}}>
             <img src={LOGO_URL} alt="Аякс на берегу" className="h-28 w-auto object-contain" />
           </button>
 
@@ -552,7 +552,7 @@ export default function Index() {
       <footer className="bg-[#071829] py-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full p-3">
+            <div className="flex items-center justify-center bg-white/20 backdrop-blur-md rounded-3xl p-3" style={{boxShadow: "0 0 24px 12px rgba(255,255,255,0.12)"}}>
               <img src={LOGO_URL} alt="Аякс на берегу" className="h-28 w-auto object-contain" />
             </div>
             <div className="flex flex-wrap justify-center gap-5">

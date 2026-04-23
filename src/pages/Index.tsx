@@ -321,9 +321,7 @@ export default function Index() {
                 Актуальные объекты
               </h2>
               <GoldDivider />
-              <p className="text-[#0D2644]/60 max-w-lg mx-auto text-sm mt-2">
-                Тщательно отобранные объекты у моря. Полная юридическая проверка перед показом.
-              </p>
+              <p className="text-[#0D2644]/60 max-w-lg mx-auto text-sm mt-2">Тщательно отобранные объекты у моря. </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               {objects.map((obj, i) => (

@@ -25,7 +25,7 @@ const services = [
 ];
 
 const objects = [
-  { title: "Апартаменты в «Имеретинской Ривьере»", area: "87 м²", price: "18 500 000 ₽", tag: "Новостройка", img: HERO_IMG },
+  { title: "1-комн. квартира в ЖК «Золотая Бухта»", area: "57 м²", price: "23 999 990 ₽", tag: "Готов к заселению", img: "https://s3.topnlab.ru/files-service/storage/1877c4d989a996c615c16c810b19/3d3e9f1b52dbda655718d337fcbef408.jpg", href: "https://crm.topnlab.ru/object1776936296157/134464228/Mjg2ODAy" },
   { title: "Вилла с видом на море в Хосте", area: "240 м²", price: "45 000 000 ₽", tag: "Готов к заселению", img: COAST_IMG },
   { title: "Студия в «Сочи Парк Отель»", area: "42 м²", price: "8 200 000 ₽", tag: "Инвестиция", img: HERO_IMG },
   { title: "Таунхаус в Адлере у набережной", area: "160 м²", price: "22 000 000 ₽", tag: "Эксклюзив", img: COAST_IMG },
@@ -345,9 +345,16 @@ export default function Index() {
                       </div>
                       <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl text-[#C9A84C] font-semibold">{obj.price}</div>
                     </div>
-                    <button className="mt-4 w-full border border-[#0D2644]/20 hover:border-[#C9A84C] hover:text-[#C9A84C] text-[#0D2644]/70 py-2.5 text-sm tracking-wide transition-all">
-                      Подробнее
-                    </button>
+                    {obj.href ? (
+                      <a href={obj.href} target="_blank" rel="noopener noreferrer"
+                        className="mt-4 block w-full border border-[#0D2644]/20 hover:border-[#C9A84C] hover:text-[#C9A84C] text-[#0D2644]/70 py-2.5 text-sm tracking-wide transition-all text-center">
+                        Подробнее
+                      </a>
+                    ) : (
+                      <button className="mt-4 w-full border border-[#0D2644]/20 hover:border-[#C9A84C] hover:text-[#C9A84C] text-[#0D2644]/70 py-2.5 text-sm tracking-wide transition-all">
+                        Подробнее
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}

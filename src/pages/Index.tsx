@@ -179,7 +179,7 @@ export default function Index() {
 
         <div className="absolute bottom-12 left-0 right-0 z-10 hidden md:flex justify-center">
           <div className="flex divide-x divide-white/20 bg-[#071829]/60 backdrop-blur-md border border-white/10 px-2">
-            {[["27 лет", "На рынке"], ["98%", "Довольных клиентов"]].map(([val, lbl]) => (
+            {[["27 лет", "На рынке"], ["№1", "В Краснодарском крае"]].map(([val, lbl]) => (
               <div key={lbl} className="px-8 py-4 text-center">
                 <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl text-[#C9A84C] font-semibold">{val}</div>
                 <div className="text-white/60 text-xs tracking-widest uppercase mt-0.5">{lbl}</div>
@@ -231,8 +231,8 @@ export default function Index() {
                 <div className="absolute -bottom-4 -left-4 w-24 h-24 border-2 border-[#C9A84C]/40" />
                 <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-[#C9A84C]/40" />
                 <div className="absolute bottom-6 right-6 bg-[#0D2644]/90 backdrop-blur-sm p-5 border-l-2 border-[#C9A84C]">
-                  <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-[#C9A84C] font-semibold">98%</div>
-                  <div className="text-white/80 text-xs tracking-wider uppercase mt-1">Довольных клиентов</div>
+                  <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl text-[#C9A84C] font-semibold">№1</div>
+                  <div className="text-white/80 text-xs tracking-wider uppercase mt-1">В Краснодарском крае</div>
                 </div>
               </div>
             </div>

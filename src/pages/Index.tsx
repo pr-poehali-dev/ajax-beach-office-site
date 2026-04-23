@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const LOGO_URL = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/ba24c586-555c-4dee-89b3-b5627406e1ca.png";
+const LOGO_URL = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/5eca0d73-2ef5-4209-9cfd-c63af0990215.png";
 const HERO_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/df7edfb7-e45e-416d-84e3-261e63641bb5.jpg";
 const COAST_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/6f1aa1d4-26ec-4267-9fbd-113d903ccb2e.jpg";
 
@@ -102,8 +102,8 @@ export default function Index() {
       {/* NAV */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#071829]/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <button onClick={() => scrollTo("#hero")} className="flex items-center bg-white/15 backdrop-blur-sm rounded-2xl px-3 py-2">
-            <img src={LOGO_URL} alt="Аякс на берегу" className="h-20 w-auto object-contain" />
+          <button onClick={() => scrollTo("#hero")} className="flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full p-3">
+            <img src={LOGO_URL} alt="Аякс на берегу" className="h-28 w-auto object-contain" />
           </button>
 
           <div className="hidden lg:flex items-center gap-7">
@@ -552,8 +552,8 @@ export default function Index() {
       <footer className="bg-[#071829] py-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center bg-white/15 backdrop-blur-sm rounded-2xl px-3 py-2">
-              <img src={LOGO_URL} alt="Аякс на берегу" className="h-20 w-auto object-contain" />
+            <div className="flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full p-3">
+              <img src={LOGO_URL} alt="Аякс на берегу" className="h-28 w-auto object-contain" />
             </div>
             <div className="flex flex-wrap justify-center gap-5">
               {navLinks.map((l) => (

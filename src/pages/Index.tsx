@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
 const LOGO_URL = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/ba24c586-555c-4dee-89b3-b5627406e1ca.png";
-const HERO_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/files/e4e75224-fe65-4f5f-93f0-cef106c3cca4.jpg";
+const HERO_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/bucket/df7edfb7-e45e-416d-84e3-261e63641bb5.jpg";
 const COAST_IMG = "https://cdn.poehali.dev/projects/b3e10892-e0a3-42a8-85c3-b960743e4a19/files/a68474c1-2d4e-4050-bfd4-cb5c3f09f79b.jpg";
 
 const navLinks = [
@@ -179,9 +179,9 @@ export default function Index() {
 
         <div className="absolute bottom-12 left-0 right-0 z-10 hidden md:flex justify-center">
           <div className="flex divide-x divide-white/20 bg-[#071829]/60 backdrop-blur-md border border-white/10 px-2">
-            {[["27 лет", "На рынке"], ["№1", "В Краснодарском крае"]].map(([val, lbl]) => (
+            {[["27 лет", "На рынке", "text-2xl"], ["№1", "В Краснодарском крае", "text-4xl"]].map(([val, lbl, size]) => (
               <div key={lbl} className="px-8 py-4 text-center">
-                <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-2xl text-[#C9A84C] font-semibold">{val}</div>
+                <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className={`${size} text-[#C9A84C] font-semibold`}>{val}</div>
                 <div className="text-white/60 text-xs tracking-widest uppercase mt-0.5">{lbl}</div>
               </div>
             ))}

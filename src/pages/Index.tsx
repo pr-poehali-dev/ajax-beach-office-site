@@ -28,7 +28,7 @@ const objects = [
   { title: "1-комн. квартира в ЖК «Золотая Бухта»", area: "57 м²", price: "23 999 990 ₽", tag: "Готов к заселению", img: "https://s3.topnlab.ru/files-service/storage/1877c4d989a996c615c16c810b19/3d3e9f1b52dbda655718d337fcbef408.jpg", href: "https://crm.topnlab.ru/object1776936296157/134464228/Mjg2ODAy" },
   { title: "Участок 7 соток у моря в Анапе", area: "700 м²", price: "15 000 000 ₽", tag: "Продажа", img: "https://s3-2.topnlab.ru/files-service/storage/59ef30da697356b22f0ee2fa1ce8/7b409f5f5c7fbbedc0f1805a97f5a337.png", href: "https://crm.topnlab.ru/object1776946503944/133678922/Mjg2ODAy" },
   { title: "2-комн. квартира в ЖК «Морская Горгиппия»", area: "65 м²", price: "8 499 990 ₽", tag: "Продажа", img: "https://s3-3.topnlab.ru/files-service/storage/753fd177d7141c47615393c3989f/b1ca97b787fd9c2c680406a2fe1ed04b.jpg", href: "https://crm.topnlab.ru/object1776947038491/117313413/Mjg2ODAy" },
-  { title: "Таунхаус в Адлере у набережной", area: "160 м²", price: "22 000 000 ₽", tag: "Эксклюзив", img: COAST_IMG },
+  { title: "Дом 85.8 м² с участком 5 соток в Гостагаевской", area: "85.8 м²", price: "7 450 000 ₽", tag: "Продажа", img: "https://s3-2.topnlab.ru/files-service/storage/54fa8deb28bf86165291091daa62/867362c65e58e58a89237e6d7485ad93.jpg", href: "https://crm.topnlab.ru/object1776947621588/108881181/Mjg2ODAy" },
 ];
 
 const reviews = [

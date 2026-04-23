@@ -214,6 +214,15 @@ export function ContactsSection() {
                 ))}
                 <div className="pt-4 flex gap-3">
                   <a
+                    href="https://vk.com/club237868623"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="ВКонтакте"
+                    className="w-10 h-10 border border-[#0D2644]/20 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 flex items-center justify-center transition-all"
+                  >
+                    <span className="text-[#0D2644] font-bold text-xs leading-none tracking-tight">VK</span>
+                  </a>
+                  <a
                     href="https://www.instagram.com/ayax_bereg?igsh=MWo5MWdrNDNtYnJhOQ%3D%3D&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"

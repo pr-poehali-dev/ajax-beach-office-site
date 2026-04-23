@@ -164,9 +164,7 @@ export default function Index() {
             Недвижимость<br /><em className="italic text-[#C9A84C]">у моря</em>
           </h1>
           <GoldDivider />
-          <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-10 font-light leading-relaxed">
-            Агентство «Аякс на берегу» — ваш надёжный партнёр в покупке, продаже и аренде элитной недвижимости на Черноморском побережье
-          </p>
+          <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-10 font-light leading-relaxed">Агентство «Аякс на берегу» — ваш надёжный партнёр в покупке, продаже и аренде недвижимости на Черноморском побережье</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={() => scrollTo("#objects")}
               className="bg-[#C9A84C] hover:bg-[#9A7A2E] text-[#0D2644] font-semibold px-8 py-4 tracking-wide transition-all hover:scale-105 text-sm">

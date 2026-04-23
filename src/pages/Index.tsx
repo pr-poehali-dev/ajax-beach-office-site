@@ -360,9 +360,10 @@ export default function Index() {
               ))}
             </div>
             <div className="text-center mt-10">
-              <button className="border-2 border-[#0D2644] hover:bg-[#0D2644] hover:text-white text-[#0D2644] px-10 py-3.5 tracking-wide transition-all text-sm font-semibold">
+              <a href="https://crm.topnlab.ru/objects/sale/realty" target="_blank" rel="noopener noreferrer"
+                className="inline-block border-2 border-[#0D2644] hover:bg-[#0D2644] hover:text-white text-[#0D2644] px-10 py-3.5 tracking-wide transition-all text-sm font-semibold">
                 Смотреть все объекты
-              </button>
+              </a>
             </div>
           </AnimSection>
         </div>

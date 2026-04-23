@@ -546,7 +546,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center">
-              <img src={LOGO_URL} alt="Аякс на берегу" className="h-26 w-auto object-contain rounded-none" />
+              <img src={LOGO_URL} alt="Аякс на берегу" className="h-24 w-auto object-contain rounded-none mx-0 px-0" />
             </div>
             <div className="flex flex-wrap justify-center gap-5">
               {navLinks.map((l) => (

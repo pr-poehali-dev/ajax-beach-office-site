@@ -178,11 +178,11 @@ export default function Index() {
         </div>
 
         <div className="absolute bottom-12 left-0 right-0 z-10 hidden md:flex justify-center">
-          <div className="flex divide-x divide-white/20 bg-[#071829]/60 backdrop-blur-md border border-white/10 px-2">
+          <div className="flex items-end divide-x divide-white/20 bg-[#071829]/60 backdrop-blur-md border border-white/10 px-2">
             {[["27 лет", "На рынке", "text-2xl"], ["№1", "В Краснодарском крае", "text-4xl"]].map(([val, lbl, size]) => (
-              <div key={lbl} className="px-8 py-4 text-center">
-                <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className={`${size} text-[#C9A84C] font-semibold`}>{val}</div>
-                <div className="text-white/60 text-xs tracking-widest uppercase mt-0.5">{lbl}</div>
+              <div key={lbl} className="px-8 py-4 text-center flex flex-col items-center justify-end">
+                <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className={`${size} text-[#C9A84C] font-semibold leading-none`}>{val}</div>
+                <div className="text-white/60 text-xs tracking-widest uppercase mt-1">{lbl}</div>
               </div>
             ))}
           </div>

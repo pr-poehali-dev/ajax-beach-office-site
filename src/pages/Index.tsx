@@ -35,6 +35,8 @@ const reviews = [
   { name: "Сергей Малинин", city: "Краснодар", agent: "Вадим", deal: "Покупка", text: "Давно хотели купить квартиру в Анапе у моря, но не знали, с чего начать. Вадим из «Аякса» провёл нас по всем объектам, объяснил все нюансы и помог выбрать отличный вариант. Сделка прошла чисто и в срок. Огромное спасибо!", rating: 5 },
   { name: "Ольга Кириченко", city: "Ростов-на-Дону", agent: "Лариса", deal: "Продажа", text: "Продавала квартиру в Анапе — думала, это займёт полгода. Лариса нашла покупателя за три недели! Всё оформила сама, я приехала только на подписание. Профессионально и без нервов.", rating: 5 },
   { name: "Дмитрий Фролов", city: "Москва", agent: "Григорий", deal: "Покупка", text: "Покупали дом в Анапе дистанционно — живём в Москве. Григорий показывал объекты по видеосвязи, всё проверил юридически. Через месяц стали собственниками. Рекомендую агентство всем, кто покупает из другого города.", rating: 5 },
+  { name: "Вера Соколова", city: "Санкт-Петербург", agent: "Вадим", deal: "Покупка", text: "Искала квартиру у моря для переезда на пмж. Вера и команда Аякса подобрали именно то, что нужно — с видом на море и в нужном районе. Очень внимательный подход, ни одного лишнего звонка без повода!", rating: 5 },
+  { name: "Анастасия Белова", city: "Новосибирск", agent: "Лариса", deal: "Аренда", text: "Снимали квартиру на лето всей семьёй. Анастасия подошла к делу профессионально — нашла вариант за день, всё оформили дистанционно. Приехали — всё именно так, как на фото. Спасибо!", rating: 5 },
 ];
 
 const faqs = [
@@ -75,6 +77,53 @@ function GoldDivider() {
       <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A84C]" />
       <div className="w-2 h-2 rotate-45 bg-[#C9A84C]" />
       <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A84C]" />
+    </div>
+  );
+}
+
+function ReviewCarousel() {
+  const [current, setCurrent] = useState(0);
+  const total = reviews.length;
+  const prev = () => setCurrent((c) => (c - 1 + total) % total);
+  const next = () => setCurrent((c) => (c + 1) % total);
+  const r = reviews[current];
+  return (
+    <div className="relative">
+      <div className="bg-white/5 border border-white/10 p-10 flex flex-col min-h-[280px]">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex gap-0.5">
+            {Array.from({ length: r.rating }).map((_, j) => (
+              <span key={j} className="text-[#C9A84C] text-xl">★</span>
+            ))}
+          </div>
+          <span className="text-xs text-[#C9A84C]/70 border border-[#C9A84C]/30 px-2 py-0.5 tracking-wide">{r.deal}</span>
+        </div>
+        <p className="text-white leading-relaxed mb-8 text-base flex-1" style={{ fontFamily: "'Golos Text', sans-serif", fontWeight: 400 }}>
+          «{r.text}»
+        </p>
+        <div className="border-t border-white/10 pt-5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C] font-bold text-base shrink-0">
+              {r.name[0]}
+            </div>
+            <div>
+              <div className="text-white font-semibold text-sm" style={{ fontFamily: "'Golos Text', sans-serif" }}>{r.name}</div>
+              <div className="text-white/40 text-xs">{r.city}</div>
+            </div>
+          </div>
+          <div className="text-white/30 text-xs">Менеджер: <span className="text-[#C9A84C]/70">{r.agent}</span></div>
+        </div>
+      </div>
+      <div className="flex items-center justify-between mt-6">
+        <button onClick={prev} className="w-11 h-11 border border-white/20 hover:border-[#C9A84C] text-white/60 hover:text-[#C9A84C] flex items-center justify-center transition-all text-lg">‹</button>
+        <div className="flex gap-2">
+          {reviews.map((_, i) => (
+            <button key={i} onClick={() => setCurrent(i)}
+              className={`w-2 h-2 transition-all ${i === current ? "bg-[#C9A84C]" : "bg-white/20 hover:bg-white/40"}`} />
+          ))}
+        </div>
+        <button onClick={next} className="w-11 h-11 border border-white/20 hover:border-[#C9A84C] text-white/60 hover:text-[#C9A84C] flex items-center justify-center transition-all text-lg">›</button>
+      </div>
     </div>
   );
 }
@@ -372,42 +421,14 @@ export default function Index() {
             <rect width="100%" height="100%" fill="url(#grid)"/>
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <AnimSection>
             <div className="text-center mb-14">
               <p className="text-[#C9A84C] tracking-[0.25em] text-xs uppercase mb-3">Клиенты о нас</p>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl md:text-5xl text-white font-light">Отзывы</h2>
               <GoldDivider />
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {reviews.map((r, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 p-8 hover:border-[#C9A84C]/40 transition-all flex flex-col">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: r.rating }).map((_, j) => (
-                        <span key={j} className="text-[#C9A84C] text-lg">★</span>
-                      ))}
-                    </div>
-                    <span className="text-xs text-[#C9A84C]/70 border border-[#C9A84C]/30 px-2 py-0.5">{r.deal}</span>
-                  </div>
-                  <p style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-white/80 leading-relaxed mb-6 text-lg italic flex-1">
-                    «{r.text}»
-                  </p>
-                  <div className="border-t border-white/10 pt-5">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div style={{ fontFamily: "'Cormorant Garamond', serif" }} className="w-9 h-9 bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C] font-semibold text-lg shrink-0">
-                        {r.name[0]}
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold text-sm">{r.name}</div>
-                        <div className="text-white/40 text-xs">{r.city}</div>
-                      </div>
-                    </div>
-                    <div className="text-white/30 text-xs">Менеджер: <span className="text-[#C9A84C]/70">{r.agent}</span></div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <ReviewCarousel />
           </AnimSection>
         </div>
       </section>
